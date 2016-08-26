@@ -53,7 +53,7 @@ $(document).ready(function() {
   $("#buttonToAddressPage").click(function(event) {
     event.preventDefault();
     $("#pizzaBuilderPage").fadeOut();
-    setTimeout(function(){$("#addressInputPage").fadeIn();}, 350);
+    setTimeout(function(){$("#addressInputPage").fadeIn();}, 450);
   });
 
   $("form").submit(function(event) {

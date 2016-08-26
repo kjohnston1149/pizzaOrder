@@ -10,7 +10,7 @@
     <title>Radical Pizza times</title>
   </head>
   <body>
-    <h1 class="jumbotron">PIZZA GOIN' OUT</h1>
+    <h1 class="jumbotron">A Most Radical Pizza</h1>
     <!-- Page 1- Landing Page -->
     <div class="container img-rounded" id="landingPage">
       <h1>Welcome to Radical Pizza!</h1>
@@ -21,32 +21,40 @@
     <!-- Page 2 - build pizza -->
     <form id="pizzaOptionsAndAddress">
       <div class="container img-rounded" id="pizzaBuilderPage">
-        <div class="row">
           <h2>Step 1: Create Your Pizza</h2>
-            <div class="form-group">
-              <label for="pizzaSizeSelect">What Size?</label>
-              <select class="form-control" id="pizzaSizeSelect">
-                <option disabled selected value> -- select a size -- </option>
-                <option>Small</option>
-                <option>Medium</option>
-                <option>Large</option>
-              </select>
+            <div class="row">
+              <div class="form-group">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <label for="pizzaSizeSelect">What Size?</label>
+                  <select class="form-control" id="pizzaSizeSelect">
+                    <option disabled selected value> -- select a size -- </option>
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                  </select>
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="pizzaCrustSelect">What type of Crust?</label>
-              <select class="form-control" id="pizzaCrustSelect">
-                <option disabled selected value> -- select a crust type -- </option>
-                <option>Thin-crust</option>
-                <option>Regular-Crust</option>
-                <option>Deep-Dish</option>
-              </select>
+            <div class=row>
+              <div class="form-group">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <label for="pizzaCrustSelect">What type of Crust?</label>
+                  <select class="form-control" id="pizzaCrustSelect">
+                    <option disabled selected value> -- select a crust type -- </option>
+                    <option>Thin-crust</option>
+                    <option>Regular-Crust</option>
+                    <option>Deep-Dish</option>
+                  </select>
+                </div>
+              </div>
             </div>
+            <div class="row">
             <div class="form-group">
               <label for="toppingSelect">What Toppings?</label>
                 <div class="toppingSelect">
                   <div class="checkbox">
                     <label>
-                      <input type="checkbox" name="toppingSelect" value="cheese">
+                      <input type="checkbox" name="toppingSelect" value="cheese" checked>
                       Cheese
                     </label>
                   </div>
@@ -89,37 +97,45 @@
         <h2>Step 2: Enter Your Name and Address</h2>
         <div id="new-addresses">
           <div class="new-address">
-            <div class="form-group">
-              <label for="userName">Name:</label>
-              <input type="text" class="form-control userName">
-            </div>
-            <div class="form-group">
-              <label for="new-street">Street:</label>
-              <input type="text" class="form-control new-street">
-            </div>
-            <div class="form-group">
-              <label for="new-city">City:</label>
-              <input type="text" class="form-control new-city">
-            </div>
-            <div class="form-group">
-              <label for="new-state">State:</label>
-              <input type="text" class="form-control new-state">
+            <div class="col-sm-6 col-sm-offset-3">
+              <div class="form-group">
+                <label for="userName">Name:</label>
+                <input type="text" class="form-control userName" placeholder="Enter your name" required>
+              </div>
+              <div class="form-group">
+                <label for="new-street">Street:</label>
+                <input type="text" class="form-control new-street" placeholder="Enter your street" required>
+              </div>
+              <div class="form-group">
+                <label for="new-city">City:</label>
+                <input type="text" class="form-control new-city" placeholder="Enter your city" required>
+              </div>
+              <div class="form-group">
+                <label for="new-state">State:</label>
+                <input type="text" class="form-control new-state" placeholder="Enter your state" required>
+              </div>
             </div>
           </div>
         </div>
-        <button type="submit" class="btn btn-success">Place your order</button>
+        <br>
+        <div class=row>
+          <div class="col-sm-6 col-sm-offset-3">
+            <button type="submit" class="btn btn-success">Place your order</button>
+          </div>
+        </div>
       </div>
     </form>
     <!-- Final Order Display Page -->
     <div class="container img-rounded" id="finalOrderPage">
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-6 col-sm-offset-3">
           <h3>Alright <span id="nameDisplay"></span>, here's what we got!</h3>
           <ul id="pizzaList">
             <li>Your <span id="sizeDisplay"></span> <span id="crustDisplay"></span> pizza costs $<span id="costDisplay"></span></li>
             <li>It has these toppings: <span id="toppingsDisplay"></span></li>
             <li>It will be delivered to <span id="addressDisplay"></span></li>
           </ul>
+          <button id="resetBtn" type="reset" class="btn btn-danger" onClick="window.location.reload()">Home</button>
           <h4>Previous orders</h4>
         </div>
         <div class="col-sm-6">
