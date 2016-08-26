@@ -38,7 +38,6 @@ Pizza.prototype.calculateToppingsCost = function() {
     this.pizzaCost += 6
   }
 }
-
 Pizza.prototype.calculateTotalCost = function() {
   this.calculateSizeCost();
   this.calculateCrustCost();
