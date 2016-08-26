@@ -21,14 +21,14 @@ _This app allows the user to chose from [TO BE FINISHED LATER]_
   * Example Input: [Large, medium (selected), small], [Cheese (selected), Pepperoni (selected), Anchovies]
   * Example Output: Pizza(Large, ["Cheese", "Pepperoni"], 0)
 
-* Calculate the cost based on properties in object.
+* Calculate the cost based on size property in object.
   * Example Input: Large, medium (selected), small], [Cheese (selected), Pepperoni (selected), Anchovies]
   * Example Output: Pizza(Large, [Cheese, Pepperoni], 12)
 
 
-*
-  * Example Input:
-  * Example Output:
+* Calculate the cost using both size and toppings properties in object.
+  * Example Input: Large, medium (selected), small], [Cheese (selected), Pepperoni (selected), Anchovies]
+  * Example Output: Pizza(Large, [Cheese, Pepperoni], 12)
 
 *
   * Example Input:
