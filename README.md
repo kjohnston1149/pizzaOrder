@@ -19,24 +19,24 @@ _This app allows the user to chose from [TO BE FINISHED LATER]_
 
 * Create an initial object from form inputs.
   * Example Input: [Large, medium (selected), small], [Cheese (selected), Pepperoni (selected), Anchovies]
-  * Example Output: Pizza(Large, ["Cheese", "Pepperoni"], 0)
+  * Example Output: newPizza{"Large", ["Cheese", "Pepperoni"], 0}
 
 * Calculate the cost based on size property in object.
   * Example Input: Large, medium (selected), small], [Cheese (selected), Pepperoni (selected), Anchovies]
-  * Example Output: Pizza(Large, [Cheese, Pepperoni], 12)
+  * Example Output: newPizza{"Large", [Cheese, Pepperoni], 12}
 
 
 * Calculate the cost using both size and toppings properties in object.
   * Example Input: Large, medium (selected), small], [Cheese (selected), Pepperoni (selected), Anchovies]
-  * Example Output: Pizza(Large, [Cheese, Pepperoni], 12)
+  * Example Output: newPizza{"Large", [Cheese, Pepperoni], 12}
 
-*
-  * Example Input:
-  * Example Output:
+* Create an Address object that includes name and specific address.
+  * Example Input: Name: Kevin, Street: 123 Fake St, City: Portland, State: OR
+  * Example Output: newAddress {"Kevin", "123 Fake St", "Portland", "OR"}
 
-*
-  * Example Input:
-  * Example Output:
+* Create a prototype to display the address in common format
+  * Example Input: newAddress.fullAddress();
+  * Example Output: 123 Fake St, Portland, OR
 
 *
   * Example Input:
