@@ -49,10 +49,6 @@ $(document).ready(function() {
 
   $("form").submit(function(event) {
     event.preventDefault();
-    $("#addressInputPage").hide();
-    $("#finalOrderPage").show();
-
-
     var inputSize = $("#pizzaSizeSelect").val();
     var toppingsArray = [];
     $(".toppingSelect input:checked").each(function() {
@@ -71,5 +67,13 @@ $(document).ready(function() {
     console.log(newAddress);
     console.log(newAddress.fullAddress());
     console.log(newPizza.pizzaCost);
+
+    $("#addressInputPage").hide();
+    $("#finalOrderPage").show();
+    $("#nameDisplay").text(newAddress.inputName);
+    $("#costDisplay").text(newPizza.pizzaCost);
+    $("#toppingsDisplay").text(newPizza.pizzaToppings);
+    $("#addressDisplay").text(newAddress.fullAddress());
+
   });
 });

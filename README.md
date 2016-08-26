@@ -25,7 +25,6 @@ _This app allows the user to chose from [TO BE FINISHED LATER]_
   * Example Input: Large, medium (selected), small], [Cheese (selected), Pepperoni (selected), Anchovies]
   * Example Output: newPizza{"Large", [Cheese, Pepperoni], 12}
 
-
 * Calculate the cost using both size and toppings properties in object.
   * Example Input: Large, medium (selected), small], [Cheese (selected), Pepperoni (selected), Anchovies]
   * Example Output: newPizza{"Large", [Cheese, Pepperoni], 12}

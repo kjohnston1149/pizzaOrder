@@ -1,4 +1,16 @@
+body {
+  background-image: url(../img/pizzaSlice.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
+.jumbotron {
+  background: #f26b6b;
+  background-color: rgba(245, 245, 245, 0.8);
+}
+.container {
+  background-color: rgba(245, 245, 245, 0.8);
+}
 
 #pizzaBuilderPage {
   display: none;
