@@ -6,6 +6,7 @@ body {
 
 li {
   font-size: 1.3em;
+  list-style-type: none;
 }
 
 span {
@@ -18,7 +19,8 @@ input {
 
 .jumbotron {
   text-align: center;
-  font-size: 4em;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 5em;
   color: white;
   background-color:  rgba(227, 68, 68, 0.8);
 }
@@ -51,6 +53,7 @@ input {
 
 #finalOrderPage {
   display: none;
+  background-color: rgba(245, 245, 245, 0.8);
 }
 
 #costDisplay{
