@@ -74,10 +74,6 @@ $(document).ready(function() {
     var inputCity = $("input.new-city").val();
     var inputState = $("input.new-state").val();
     newAddress = new Address(inputName, inputStreet, inputCity, inputState);
-    console.log(newPizza);
-    console.log(newAddress);
-    console.log(newAddress.fullAddress());
-    console.log(newPizza.pizzaCost);
 
     $("#addressInputPage").fadeOut();
     setTimeout(function(){$("#finalOrderPage").fadeIn();}, 350);

@@ -10,6 +10,32 @@
     <title>Radical Pizza times</title>
   </head>
   <body>
+    <!-- Navbar -->
+    <!-- <header class="page-header"> -->
+      <ul id="navBarList" class="nav nav-pills pull-right">
+        <li data-toggle="modal" data-target="#myModal">About</li>
+      </ul>
+      <!-- "About" Modal -->
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content" id="aboutPage">
+            <div class="modal-header">
+              <h2 class="modal-title">About Pizza Order</h2>
+            </div>
+            <div class="modal-body">
+              <h4>Created by:</h4>
+                <p>Kevin Johnston</p>
+              <h4>GitHub Username/URL:</h4>
+                <p><a href="https://github.com/kjohnston1149">kjohnston1149</a></p>
+              <h4>Intro to Programming Test for:</h4>
+                <p>Object-Oriented JavaScript</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     <h1 class="jumbotron">A Most Radical Pizza</h1>
     <!-- Page 1- Landing Page -->
     <div class="container img-rounded" id="landingPage">
@@ -128,7 +154,7 @@
     <!-- Final Order Display Page -->
     <div class="container img-rounded" id="finalOrderPage">
       <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
+        <div class="col-sm-8 col-sm-offset-2">
           <h3>Alright <span id="nameDisplay"></span>, here's what we got!</h3>
           <ul id="pizzaList">
             <li>Your <span id="sizeDisplay"></span> <span id="crustDisplay"></span> pizza costs $<span id="costDisplay"></span></li>
@@ -136,12 +162,8 @@
             <li>It will be delivered to <span id="addressDisplay"></span></li>
           </ul>
           <button id="resetBtn" type="reset" class="btn btn-danger" onClick="window.location.reload()">Home</button>
-          <h4>Previous orders</h4>
-        </div>
-        <div class="col-sm-6">
         </div>
       </div>
-
     </div>
   </body>
 </html>

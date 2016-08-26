@@ -4,6 +4,10 @@ body {
   background-repeat: no-repeat;
 }
 
+li {
+  font-size: 1.3em;
+}
+
 span {
   font-weight: bold;
 }
@@ -26,6 +30,17 @@ input {
   padding-bottom: 10px;
 }
 
+#navBarList {
+  color: white;
+  margin-right: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+#navBarList:hover {
+  text-decoration: underline;
+}
+
 #pizzaBuilderPage {
   display: none;
 }
@@ -36,4 +51,8 @@ input {
 
 #finalOrderPage {
   display: none;
+}
+
+#costDisplay{
+  font-size: 1.4em;
 }
