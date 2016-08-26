@@ -18,16 +18,16 @@ _This app allows the user to create their own customized pizza and have the orde
 ## Specifications
 
 * Create an initial object from form inputs.
-  * Example Input: [Large, medium (selected), small], [Cheese (selected), Pepperoni (selected), Anchovies]
-  * Example Output: newPizza{"Large", ["Cheese", "Pepperoni"], 0}
+  * Example Input: [Large, medium (selected), small], [Thin-crust(selected), Regular-Crust Deep-Dish],[Cheese (selected), Pepperoni (selected), Anchovies]
+  * Example Output: newPizza{"Large", Thin-crust, ["Cheese", "Pepperoni"], 0}
 
 * Calculate the cost based on size property in object.
   * Example Input: Large, medium (selected), small], [Cheese (selected), Pepperoni (selected), Anchovies]
-  * Example Output: newPizza{"Large", [Cheese, Pepperoni], 12}
+  * Example Output: newPizza{"Large", Thin-crust, ["Cheese", "Pepperoni"], 12}
 
-* Calculate the cost using both size and toppings properties in object.
+* Calculate the cost using  size, crust, and toppings properties in object.
   * Example Input: Large, medium (selected), small], [Cheese (selected), Pepperoni (selected), Anchovies]
-  * Example Output: newPizza{"Large", [Cheese, Pepperoni], 12}
+  * Example Output: newPizza{"Large", Thin-crust, ["Cheese", "Pepperoni"], 11}
 
 * Create an Address object that includes name and specific address.
   * Example Input: Name: Kevin, Street: 123 Fake St, City: Portland, State: OR
