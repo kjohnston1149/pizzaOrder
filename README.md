@@ -17,9 +17,9 @@ _This app allows the user to chose from [TO BE FINISHED LATER]_
 
 ## Specifications
 
-* Create an object from form inputs.
+* Create an initial object from form inputs.
   * Example Input: [Large, medium (selected), small], [Cheese (selected), Pepperoni (selected), Anchovies]
-  * Example Output: Pizza(Large, [Cheese, Pepperoni], cost)
+  * Example Output: Pizza(Large, ["Cheese", "Pepperoni"], 0)
 
 * Calculate the cost based on properties in object.
   * Example Input: Large, medium (selected), small], [Cheese (selected), Pepperoni (selected), Anchovies]
