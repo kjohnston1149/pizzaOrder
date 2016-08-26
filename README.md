@@ -1,12 +1,12 @@
 # _Pizza Order_
 
-#### _An app to create customize pizza orders, August 26 2016_
+#### _An application to create customize pizza orders, August 26 2016_
 
 #### By _**Kevin Johnston**_
 
 ## Description
 
-_This app allows the user to chose from [TO BE FINISHED LATER]_
+_This app allows the user to create their own customized pizza and have the order tied to their address.  The user first selects the size of pizza they want, along with crust type and toppings.  This information is placed in a JavaScript object and used to calculate the price of the pizza.  The user also must enter their name and address for delivery.  This information, along with the calculated price, is displayed on the final page of the website._
 
 ## Setup/Installation Requirements
 
@@ -36,18 +36,6 @@ _This app allows the user to chose from [TO BE FINISHED LATER]_
 * Create a prototype to display the address in common format
   * Example Input: newAddress.fullAddress();
   * Example Output: 123 Fake St, Portland, OR
-
-*
-  * Example Input:
-  * Example Output:
-
-*
-  * Example Input:
-  * Example Output:
-
-*
-  * Example Input:
-  * Example Output:
 
 
 ## Known Bugs
