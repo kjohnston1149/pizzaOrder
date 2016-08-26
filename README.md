@@ -14,6 +14,7 @@ _This app allows the user to create their own customized pizza and have the orde
   * https://github.com/kjohnston1149/pizzaOrder
 2. Move into the project folder
 3. Open index.html in the browser of your choice (we suggest Chrome)
+4. To view on web browser, open GitHub pages webpage of this application: https://kjohnston1149.github.io/pizzaOrder/
 
 ## Specifications
 
