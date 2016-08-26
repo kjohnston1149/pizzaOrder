@@ -34,12 +34,24 @@ Address.prototype.fullAddress = function() {
 }
 // UI Logic
 $(document).ready(function() {
-//   $("form").click(function(event) {
-//     event.preventDefault();
-//   });
+  $("#buttonToPizzaPage").click(function(event) {
+    event.preventDefault();
+    $("#landingPage").hide();
+    $("#pizzaBuilderPage").show();
+
+  });
+
+  $("#buttonToAddressPage").click(function(event) {
+    event.preventDefault();
+    $("#pizzaBuilderPage").hide();
+    $("#addressInputPage").show();
+  });
 
   $("form").submit(function(event) {
     event.preventDefault();
+    $("#addressInputPage").hide();
+    $("#finalOrderPage").show();
+
 
     var inputSize = $("#pizzaSizeSelect").val();
     var toppingsArray = [];
