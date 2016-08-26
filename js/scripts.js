@@ -38,6 +38,12 @@ Pizza.prototype.calculateToppingsCost = function() {
     this.pizzaCost += 6
   }
 }
+
+Pizza.prototype.calculateTotalCost = function() {
+  this.calculateSizeCost();
+  this.calculateCrustCost();
+  this.calculateToppingsCost();
+}
 Address.prototype.fullAddress = function() {
   return this.street + ", " + this.city + ", " +this.state;
 }
@@ -65,9 +71,7 @@ $(document).ready(function() {
       toppingsArray.push($(this).val());
     });
     var newPizza = new Pizza(inputSize, inputCrust, toppingsArray, 0);
-    newPizza.calculateSizeCost();
-    newPizza.calculateCrustCost();
-    newPizza.calculateToppingsCost();
+    newPizza.calculateTotalCost();
 
     var inputName = $("input.userName").val();
     var inputStreet = $("input.new-street").val();
