@@ -33,6 +33,15 @@
               </select>
             </div>
             <div class="form-group">
+              <label for="pizzaCrustSelect">What type of Crust?</label>
+              <select class="form-control" id="pizzaCrustSelect">
+                <option disabled selected value> -- select a crust type -- </option>
+                <option>Thin-crust</option>
+                <option>Regular-Crust</option>
+                <option>Deep-Dish</option>
+              </select>
+            </div>
+            <div class="form-group">
               <label for="toppingSelect">What Toppings?</label>
                 <div class="toppingSelect">
                   <div class="checkbox">
@@ -107,14 +116,16 @@
         <div class="col-sm-6">
           <h3>Alright <span id="nameDisplay"></span>, here's what we got!</h3>
           <ul id="pizzaList">
-            <li>Your pizza costs $<span id="costDisplay"></span></li>
+            <li>Your <span id="sizeDisplay"></span> <span id="crustDisplay"></span> pizza costs $<span id="costDisplay"></span></li>
             <li>It has these toppings: <span id="toppingsDisplay"></span></li>
             <li>It will be delivered to <span id="addressDisplay"></span></li>
           </ul>
+          <h4>Previous orders</h4>
         </div>
         <div class="col-sm-6">
         </div>
       </div>
+      
     </div>
   </body>
 </html>

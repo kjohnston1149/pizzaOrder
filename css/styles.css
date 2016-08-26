@@ -4,6 +4,10 @@ body {
   background-repeat: no-repeat;
 }
 
+span {
+  font-weight: bold;
+}
+
 .jumbotron {
   background: #f26b6b;
   background-color: rgba(245, 245, 245, 0.8);

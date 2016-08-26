@@ -1,6 +1,7 @@
 // Business Logic
-function Pizza(size, toppings, cost) {
+function Pizza(size, crust, toppings, cost) {
   this.pizzaSize = size;
+  this.pizzaCrust = crust;
   this.pizzaToppings = toppings;
   this.pizzaCost = cost;
 }
@@ -10,7 +11,6 @@ function Address(name, street, city, state) {
   this.city = city;
   this.state = state;
 }
-
 Pizza.prototype.calculateSizeCost = function() {
   if (this.pizzaSize === "Small") {
     this.pizzaCost += 8
@@ -18,6 +18,15 @@ Pizza.prototype.calculateSizeCost = function() {
     this.pizzaCost += 12
   } else if (this.pizzaSize === "Large") {
     this.pizzaCost += 15
+  }
+}
+Pizza.prototype.calculateCrustCost = function() {
+  if (this.pizzaCrust === "Thin-crust") {
+    this.pizzaCost -= 1
+  } else if (this.pizzaCrust === "Regular-Crust") {
+    this.pizzaCost += 0
+  } else if (this.pizzaCrust === "Deep-Dish") {
+    this.pizzaCost += 1
   }
 }
 Pizza.prototype.calculateToppingsCost = function() {
@@ -50,12 +59,14 @@ $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
     var inputSize = $("#pizzaSizeSelect").val();
+    var inputCrust = $("#pizzaCrustSelect").val();
     var toppingsArray = [];
     $(".toppingSelect input:checked").each(function() {
       toppingsArray.push($(this).val());
     });
-    var newPizza = new Pizza(inputSize, toppingsArray, 0);
+    var newPizza = new Pizza(inputSize, inputCrust, toppingsArray, 0);
     newPizza.calculateSizeCost();
+    newPizza.calculateCrustCost();
     newPizza.calculateToppingsCost();
 
     var inputName = $("input.userName").val();
@@ -71,6 +82,8 @@ $(document).ready(function() {
     $("#addressInputPage").hide();
     $("#finalOrderPage").show();
     $("#nameDisplay").text(newAddress.inputName);
+    $("#sizeDisplay").text(newPizza.pizzaSize);
+    $("#crustDisplay").text(newPizza.pizzaCrust);
     $("#costDisplay").text(newPizza.pizzaCost);
     $("#toppingsDisplay").text(newPizza.pizzaToppings);
     $("#addressDisplay").text(newAddress.fullAddress());
