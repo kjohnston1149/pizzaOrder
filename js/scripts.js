@@ -34,12 +34,13 @@ Address.prototype.fullAddress = function() {
 }
 // UI Logic
 $(document).ready(function() {
-  $("form").click(function(event) {
-    event.preventDefault();
-  });
+//   $("form").click(function(event) {
+//     event.preventDefault();
+//   });
 
   $("form").submit(function(event) {
     event.preventDefault();
+
     var inputSize = $("#pizzaSizeSelect").val();
     var toppingsArray = [];
     $(".toppingSelect input:checked").each(function() {
@@ -48,7 +49,15 @@ $(document).ready(function() {
     var newPizza = new Pizza(inputSize, toppingsArray, 0);
     newPizza.calculateSizeCost();
     newPizza.calculateToppingsCost();
+
+    var inputName = $("input.userName").val();
+    var inputStreet = $("input.new-street").val();
+    var inputCity = $("input.new-city").val();
+    var inputState = $("input.new-state").val();
+    newAddress = new Address(inputName, inputStreet, inputCity, inputState);
     console.log(newPizza);
+    console.log(newAddress);
+    console.log(newAddress.fullAddress());
     console.log(newPizza.pizzaCost);
   });
 });
