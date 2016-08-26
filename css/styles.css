@@ -9,8 +9,8 @@ span {
 }
 
 .jumbotron {
-  background: #f26b6b;
-  background-color: rgba(245, 245, 245, 0.8);
+  color: white;
+  background-color:  rgba(227, 68, 68, 0.8);
 }
 .container {
   background-color: rgba(245, 245, 245, 0.8);

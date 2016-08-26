@@ -45,15 +45,15 @@ Address.prototype.fullAddress = function() {
 $(document).ready(function() {
   $("#buttonToPizzaPage").click(function(event) {
     event.preventDefault();
-    $("#landingPage").hide();
-    $("#pizzaBuilderPage").show();
+    $("#landingPage").fadeOut();
+    setTimeout(function(){$("#pizzaBuilderPage").fadeIn();}, 350);
 
   });
 
   $("#buttonToAddressPage").click(function(event) {
     event.preventDefault();
-    $("#pizzaBuilderPage").hide();
-    $("#addressInputPage").show();
+    $("#pizzaBuilderPage").fadeOut();
+    setTimeout(function(){$("#addressInputPage").fadeIn();}, 350);
   });
 
   $("form").submit(function(event) {
@@ -79,8 +79,8 @@ $(document).ready(function() {
     console.log(newAddress.fullAddress());
     console.log(newPizza.pizzaCost);
 
-    $("#addressInputPage").hide();
-    $("#finalOrderPage").show();
+    $("#addressInputPage").fadeOut();
+    setTimeout(function(){$("#finalOrderPage").fadeIn();}, 350);
     $("#nameDisplay").text(newAddress.inputName);
     $("#sizeDisplay").text(newPizza.pizzaSize);
     $("#crustDisplay").text(newPizza.pizzaCrust);
