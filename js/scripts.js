@@ -4,6 +4,12 @@ function Pizza(size, toppings, cost) {
   this.pizzaToppings = toppings;
   this.pizzaCost = cost;
 }
+function Address(name, street, city, state) {
+  this.inputName = name;
+  this.street = street;
+  this.city = city;
+  this.state = state;
+}
 
 Pizza.prototype.calculateSizeCost = function() {
   if (this.pizzaSize === "Small") {
@@ -14,7 +20,6 @@ Pizza.prototype.calculateSizeCost = function() {
     this.pizzaCost += 15
   }
 }
-
 Pizza.prototype.calculateToppingsCost = function() {
   if (this.pizzaToppings.length <= 2) {
     this.pizzaCost += 0
@@ -24,9 +29,15 @@ Pizza.prototype.calculateToppingsCost = function() {
     this.pizzaCost += 6
   }
 }
-
+Address.prototype.fullAddress = function() {
+  return this.street + ", " + this.city + ", " +this.state;
+}
 // UI Logic
 $(document).ready(function() {
+  $("form").click(function(event) {
+    event.preventDefault();
+  });
+
   $("form").submit(function(event) {
     event.preventDefault();
     var inputSize = $("#pizzaSizeSelect").val();
